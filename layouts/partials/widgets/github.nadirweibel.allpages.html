@@ -7,7 +7,7 @@ TEST TEST TEST
 
 <p>{{$section.Content}}</p>
 
-{{ range first 20 (where .Site.Pages "Type" "faq") }}
+{{ range first 20 (where .Site.RegularPages "Type" "faq") }}
   {{ .Title }}
 	{{ .Content }}
 {{ end }}
