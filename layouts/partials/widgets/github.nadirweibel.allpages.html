@@ -4,3 +4,7 @@
 <h2>{{$section.Title}}</h2>
 
 <p>{{$section.Content}}</p>
+
+{{ range first 20 (where .Data.Pages "Type" "faq") }}
+	{{ .Content }}
+{{ end }}
