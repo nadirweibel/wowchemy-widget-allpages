@@ -5,6 +5,6 @@
 
 <p>{{$section.Content}}</p>
 
-{{ range first 20 (where .Data.Pages "Type" "faq") }}
+{{ range first 20 (where .Site.Pages "Type" "faq") }}
 	{{ .Content }}
 {{ end }}
