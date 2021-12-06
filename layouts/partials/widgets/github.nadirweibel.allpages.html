@@ -7,10 +7,10 @@ TEST TEST TEST
 
 <p>{{$section.Content}}</p>
 
-{{ range first 20 (where .Site.RegularPages "Type" "faq") }}
-  {{ .Title }}
+{{ range first 5 (where .Data.Pages "Section" "in" (slice "faq") }}
+	{{ .Title }}
 	{{ .Content }}
+  <hr/>
 {{ end }}
-
 
 TEST 2 TEST 2
