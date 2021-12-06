@@ -1,13 +1,10 @@
-{{ $page := .root }}
-{{ $section := .page }}
-
 TEST TEST TEST
 
 <h2>{{$section.Title}}</h2>
 
 <p>{{$section.Content}}</p>
 
-{{ range first 20 (where $self.Site.RegularPages "Section" "faq") }}
+{{ range first 20 (where .Site.RegularPages "Section" "faq") }}
 	{{ .Title }}
 	{{ .Content }}
   <hr/>
